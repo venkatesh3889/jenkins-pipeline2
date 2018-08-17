@@ -1,5 +1,5 @@
 FROM openjdk:8-jdk-alpine
-COPY  gs-spring-boot-docker-0.1.0.jar  my-app.jar
+COPY target/gs-spring-boot-docker-0.1.0.jar my-app.jar
 WORKDIR /
+CMD java -jar my-app.jar
 EXPOSE 8082
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
